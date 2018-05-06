@@ -11,6 +11,11 @@ import axios from 'axios'
 
 export default {
   name: 'subreddit-input',
+  data () {
+    return {
+      subreddit: {}
+    }
+  },
   computed: {
     getData () {
       return this.$store.getters['newsData/getData']

@@ -1,11 +1,13 @@
 <template>
-
+  <div>
+    Navbar
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "header-mobile"
-    }
+export default {
+  name: 'navbar-app'
+}
 </script>
 
 <style scoped>

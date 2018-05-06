@@ -1,11 +1,13 @@
 <template>
-
+  <div>
+    Footer
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "body-mobile"
-    }
+export default {
+  name: 'footer-app'
+}
 </script>
 
 <style scoped>
