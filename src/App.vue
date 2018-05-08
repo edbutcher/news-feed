@@ -21,6 +21,8 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Footer from './components/Footer'
+import HomePage from './components/HomePage'
+import Page404 from './components/Page404'
 
 export default {
   name: 'App',
@@ -29,7 +31,9 @@ export default {
     Navbar,
     Body,
     Footer,
-    SubredditInput
+    SubredditInput,
+    HomePage,
+    Page404
   }
 }
 </script>
