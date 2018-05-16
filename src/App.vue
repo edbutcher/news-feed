@@ -96,34 +96,37 @@ export default {
 
 <style>
 #app {
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*text-align: center;*/
-  /*color: #2c3e50;*/
-  /*margin-top: 60px;*/
+  margin: 0;
+  font-family: Arial,Helvetica, sans-serif;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
 }
-#header {
-  background-color: aqua;
-  height: 5%;
-  margin-top: 50px;
-}
-#navbar{
-  background-color: burlywood;
-  height: 5%;
-  position: fixed;
-  top: 0;
+img {
+  display: block;
   width: 100%;
+  height: auto;
 }
-#body {
-  background-color: white;
-
+h1, h2, h3 {
+  margin: 0;
+  padding: 1em 0;
 }
-#footer{
-  background-color: aqua;
-  height: 5%;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: .5em 0;
+}
+.btn:hover {
+  background: #eaeaea;
+  color: #333;
 }
 </style>
