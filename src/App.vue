@@ -1,5 +1,24 @@
 <template>
   <div id="app">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Newsfeed</a>
+        </li>
+        <li>
+          <a href="#">Favorite</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
     <header id="showcase" class="grid">
       <div class="bg-image"></div>
       <div class="content-wrap">
@@ -8,6 +27,8 @@
         <a href="#section-b" class="btn">Read More</a>
       </div>
     </header>
+
+    <!-- Main -->
     <main>
       <section id="section-a" class="grid">
         <div class="content-wrap">
@@ -74,6 +95,8 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer id="main-footer" class="grid">
       <div>News Feed App</div>
       <div><a href="#">No company</a></div>
@@ -99,14 +122,50 @@ export default {
 </script>
 
 <style>
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
 #app {
   margin: 0;
   font-family: Arial,Helvetica, sans-serif;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--dark);
+  color: var(--light);
   font-size: 1.1em;
   text-align: center;
+  box-sizing: border-box;
 }
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
 img {
   display: block;
   width: 100%;
@@ -122,8 +181,8 @@ p {
 }
 .btn {
   display: inline-block;
-  background: #333;
-  color: #fff;
+  background: var(--dark);
+  color: var(--light);
   text-decoration: none;
   padding: 1em 2em;
   border: 1px solid #666;
@@ -131,16 +190,16 @@ p {
 }
 .btn:hover {
   background: #eaeaea;
-  color: #333;
+  color: var(--dark);
 }
 #showcase {
   min-height: 450px;
-  color: #fff;
+  color: var(--light);
   text-align: center;
 }
 #showcase .bg-image {
   position: absolute;
-  background: #333 url("http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg");
+  background: var(--dark) url("http://news.bbcimg.co.uk/news/special/2015/newsspec_10077/content/english/img/1024/future_of_news.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,7 +218,7 @@ p {
 }
 #section-a {
   background: #aeaeae;
-  color: #333;
+  color: var(--dark);
   padding-bottom: 2em;
 }
 #section-b {
@@ -172,20 +231,20 @@ p {
 }
 #section-b li {
   margin-bottom: 1em;
-  background: #fff;
-  color: #333;
+  background: var(--light);
+  color: var(--dark);
 }
 .card-content {
   padding: 1.5em;
 }
 #section-c {
-  background: #fff;
-  color: #333;
+  background: var(--light);
+  color: var(--dark);
   padding: 2em;
 }
 #section-d .box {
   padding: 2em;
-  color: #fff;
+  color: var(--light);
 }
 #section-d .box:first-child {
   background: #2690d4;
@@ -193,7 +252,7 @@ p {
 #main-footer {
   padding: 2em;
   background: #000;
-  color: #fff;
+  color: var(--light);
   text-align: center;
 }
 #main-footer a {
@@ -205,6 +264,11 @@ p {
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .main-nav ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
   }
 
   #section-a .content-text {
