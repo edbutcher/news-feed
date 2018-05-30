@@ -9,6 +9,14 @@ export default {
       {
         url: '/newsfeed',
         text: 'Newsfeed'
+      },
+      {
+        url: '/favorite',
+        text: 'Favorite'
+      },
+      {
+        url: '/contact',
+        text: 'Contact'
       }
     ]
   },
